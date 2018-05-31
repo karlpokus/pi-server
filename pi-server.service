@@ -1,0 +1,11 @@
+[Unit]
+Description=pi-server service
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/node server.js
+WorkingDirectory=/home/pi/projects/pi-server
+User=pi
+
+[Install]
+WantedBy=multi-user.target
